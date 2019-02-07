@@ -24,7 +24,7 @@ class App extends Component {
     render() {
         return (
             <div>
-              <SharedState name={['stateName', 'antherStoreName']}>
+              <SharedState name={['stateName', 'antherStateName']}>
                     <Component />
               </SharedState>
               <SharedState name="stateName">
