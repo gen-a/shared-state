@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SharedState component testing... change the value by input change event... 1`] = `
+<div>
+  33
+</div>
+`;
+
+exports[`SharedState component testing... render correctly with empty state 1`] = `<div />`;
+
+exports[`SharedState component testing... render correctly with updated state 1`] = `
+<div>
+  2
+</div>
+`;

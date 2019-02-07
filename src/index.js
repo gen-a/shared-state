@@ -23,7 +23,12 @@ const unSubscribe = (object) => {
     listeners[name] = listeners[name].filter(value => value !== object);
   });
 };
-
+/**
+ *
+ * @param name {String} - the name of the store to be updated
+ * @param state {*} - new state value
+ * @param callback {Function} - optional callback o update value
+ */
 export const update = (name, state, callback = null) => {
   sharedStates[name] = state;
   if(listeners[name]){
@@ -31,7 +36,11 @@ export const update = (name, state, callback = null) => {
   }
   if (callback !== null) callback();
 };
-
+/**
+ * The component for sharing states among children Components.
+ * The linked states set by required name props that could array or string one.
+ * It pass selected sate(s)'s data to the children with the props when updated
+ */
 export default class SharedState extends Component {
   state = {};
 
