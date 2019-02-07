@@ -24,10 +24,10 @@ class App extends Component {
     render() {
         return (
             <div>
-              <SharedState name={['storeName', 'antherStoreName']}>
+              <SharedState name={['stateName', 'antherStoreName']}>
                     <Component />
               </SharedState>
-              <SharedState name="storeName">
+              <SharedState name="stateName">
                     <Component />
               </SharedState>
             </div>
@@ -45,7 +45,7 @@ With three arguments stateName, the name of the state
 ```javascript
 import { update } from 'shared-state'
 
-update('storeName', 'newValue', ()=>{})
+update('stateName', 'newValue', ()=>{})
 
 ```
 
@@ -62,7 +62,7 @@ class App extends Component {
     render() {
         return (
             <div>
-              <SharedState name="storeName">
+              <SharedState name="stateName">
                     <Input />
               </SharedState>
             </div>
@@ -73,15 +73,15 @@ class App extends Component {
 class Input extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: props.storeName.valueName};
+    this.state = {value: props.stateName.valueName};
   }
   render() {
-    const {storeName, updateState} = this.props;
+    const {stateName, updateState} = this.props;
     return (
       <input
         type="text"
         value={this.state.value}
-        onChange={(e) => updateState('storeName', {...storeName, valueName: e.target.value})}
+        onChange={(e) => updateState('stateName', {...stateName, valueName: e.target.value})}
       />
     );
   }
