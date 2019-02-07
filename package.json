@@ -1,6 +1,6 @@
 {
   "name": "shared-state",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Share state between react components",
   "main": "dist/main.js",
   "repository": {
@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.6.2",
-    "webpack": "^4.12.0"
+    "webpack": "^4.29.3"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -35,8 +35,8 @@
     "jest": "^24.1.0",
     "jsdom": "^13.2.0",
     "mocha": "^5.2.0",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
     "react-test-renderer": "^16.8.1",
     "sinon": "^7.2.3",
     "webpack-cli": "^3.0.4"
